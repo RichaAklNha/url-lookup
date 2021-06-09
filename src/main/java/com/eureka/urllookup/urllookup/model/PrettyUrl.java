@@ -17,7 +17,7 @@ import java.io.Serializable;
 @Data
 @Entity(name="pretty_url")
 @Table(name = "pretty_url", schema = "public")
-public class URLMap implements Serializable {
+public class PrettyUrl implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true)
