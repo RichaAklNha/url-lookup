@@ -56,6 +56,7 @@ public class URLLookupCacheService {
     }
 
     //only called the first time a request is made.
+    // Loads from the cache even after application server restart thereafter given redis server remains up.
     private String getValueFromDB(String requestURL) {
         logger.info("Cache miss : looking up in db");
         List<PrettyUrl> prettyUrlList = urlMapRepository.findURLMap(requestURL);
