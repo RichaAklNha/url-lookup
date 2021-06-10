@@ -57,7 +57,7 @@ Indexes:
 -> mvn package
 
 
--> java -Dspring.datasource.url=jdbc:postgresql://<host>/lookup_db -Dspring.datasource.username=<postgres_user> -Dspring.datasource.password=<postgres_password> -Dredis.host=<redis_host> -Dredis.port=<redis_port> -jar target/url-lookup-0.0.1-SNAPSHOT.jar
+-> java -Dspring.datasource.url=jdbc:postgresql://<postgres_host>/lookup_db -Dspring.datasource.username=<postgres_user> -Dspring.datasource.password=<postgres_password> -Dredis.host=<redis_host> -Dredis.port=<redis_port> -jar target/url-lookup-0.0.1-SNAPSHOT.jar
            
            
 (provide as environment properties postgres and redis server conifgurations when not using given default configurations in docker-compose)
