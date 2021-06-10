@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface URLMapRepository extends JpaRepository<PrettyUrl, Long> {
+    // to match either path or pretty url.
     @Query("from pretty_url p where p.path like :pathOrPretty% or p.pretty like :pathOrPretty%")
     public List<PrettyUrl> findURLMap(@Param("pathOrPretty") String pathOrPretty);
 }
